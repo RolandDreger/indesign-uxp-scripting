@@ -1,5 +1,5 @@
 # InDesign UXP Scripting
-Collected resources, articles and tutorials around UXP Scripting in Adobe InDesign. Hints on further sources are very welcome!
+Collected resources, articles and tutorials around UXP Scripting in Adobe InDesign. Hints on further sources and corrections are very welcome!
 
 ## Adobe
 - [UXP for Adobe InDesign](https://developer.adobe.com/indesign/uxp)
