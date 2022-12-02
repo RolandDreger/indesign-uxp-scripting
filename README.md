@@ -25,6 +25,12 @@ Collected resources, articles and tutorials around UXP Scripting in Adobe InDesi
 - [Quickstart UXP Scripting](https://www.indesignblog.com/2022/11/quickstart-uxp-scripting/)
 
 &nbsp;
+# Samples
+- [InDesign](https://github.com/AdobeDocs/uxp-indesign/tree/main/src/pages/reference/uxp-scripting-samples) (Adobe)
+- [Photoshop](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples) (Adobe)
+- [InDesign](https://github.com/RolandDreger/indesign-uxp-script-snippets)
+
+&nbsp;
 # What not works
 A incomplete list of what is not yet possible with UXP scripting (at the moment) and has already caused me headaches so far. 🤕
 ## HTML
