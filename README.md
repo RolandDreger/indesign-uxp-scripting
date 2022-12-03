@@ -34,6 +34,8 @@ Collected resources, articles and tutorials around UXP Scripting in Adobe InDesi
 A incomplete list of what is not possible with UXP Scripting (at the moment).
 ## HTML
 - `template` element
+- [Unsupported Elements](https://developer.adobe.com/indesign/uxp/uxp/reference-html/General/Unsupported%20Elements/)
+- [Unsupported Attributes](https://developer.adobe.com/indesign/uxp/uxp/reference-html/General/Unsupported%20Attributes/)
 
 ## CSS
 
