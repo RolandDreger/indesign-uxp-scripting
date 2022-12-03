@@ -31,7 +31,7 @@ Collected resources, articles and tutorials around UXP Scripting in Adobe InDesi
 
 &nbsp;
 # What not works
-A incomplete list of what is not yet possible with UXP scripting (at the moment) and has already caused me headaches so far. 🤕
+A incomplete list of what is not possible with UXP Scripting (at the moment).
 ## HTML
 - `template` element
 
