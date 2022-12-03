@@ -4,7 +4,6 @@ Collected resources, articles and tutorials around UXP Scripting in Adobe InDesi
 ## Adobe
 - [UXP for Adobe InDesign](https://developer.adobe.com/indesign/uxp)
 - [JavaScript Reference](https://developer.adobe.com/indesign/uxp/uxp/reference-js/)
-- [UXP Scripting Samples](https://github.com/AdobeDocs/uxp-indesign/tree/main/src/pages/reference/uxp-scripting-samples)
 - [Spectrum UXP Reference](https://developer.adobe.com/indesign/uxp/uxp/reference-spectrum/)
 - [Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/)
 - [Spectrum Web Components (Storybook)](https://opensource.adobe.com/spectrum-web-components/storybook/)
@@ -16,10 +15,6 @@ Collected resources, articles and tutorials around UXP Scripting in Adobe InDesi
 - [Was bringt InDesigns neue UXP Scripting API?](https://xporc.net/2022/12/02/was-bringt-indesigns-neue-uxp-scripting-api/)
 
 &nbsp;
-# Community
-- [Adobe Support Community](https://community.adobe.com/t5/indesign/ct-p/ct-indesign?page=1&sort=latest_replies&lang=all&tabid=all&topics=label-uxpscripting)
-
-&nbsp;
 # Tutorials
 ## indesignblog.com (Gregor Fellenz)
 - [Quickstart UXP Scripting](https://www.indesignblog.com/2022/11/quickstart-uxp-scripting/)
@@ -29,6 +24,10 @@ Collected resources, articles and tutorials around UXP Scripting in Adobe InDesi
 - [InDesign](https://github.com/AdobeDocs/uxp-indesign/tree/main/src/pages/reference/uxp-scripting-samples) (Adobe)
 - [Photoshop](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples) (Adobe)
 - [InDesign](https://github.com/RolandDreger/indesign-uxp-script-snippets)
+
+&nbsp;
+# Community
+- [Adobe Support Community](https://community.adobe.com/t5/indesign/ct-p/ct-indesign?page=1&sort=latest_replies&lang=all&tabid=all&topics=label-uxpscripting)
 
 &nbsp;
 # What not works
@@ -53,3 +52,6 @@ A incomplete list of what is not yet possible with UXP scripting (at the moment)
 	}, 0);
 	```
 - `new DOMParser()` nope (DOMParser is not defined)
+
+## File system
+- Adobe: »[...] there is no way to get a token from the file after reading using the FileSystem APIs, [...].« Currently only with the file picker.
