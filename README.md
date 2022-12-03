@@ -30,7 +30,7 @@ Collected resources, articles and tutorials around UXP Scripting in Adobe InDesi
 - [Adobe Support Community](https://community.adobe.com/t5/indesign/ct-p/ct-indesign?page=1&sort=latest_replies&lang=all&tabid=all&topics=label-uxpscripting)
 
 &nbsp;
-# What not works
+# What does not work?
 A incomplete list of what is not possible with UXP Scripting (at the moment).
 ## HTML
 - `template` element
@@ -53,7 +53,7 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 		console.log("Time out finished 2");
 	}, 0);
 	```
-- `new DOMParser()` nope (DOMParser is not defined)
+- `new DOMParser()` nope ... DOMParser is not defined
 
 ## File system
 - Adobe: »[...] there is no way to get a token from the file after reading using the FileSystem APIs, [...].« Currently only with the file picker.
