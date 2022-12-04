@@ -54,6 +54,12 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 	}, 0);
 	```
 - `new DOMParser()` nope ... DOMParser is not defined
+- `require('path')` is avaliable. path.basename works, but path.dirname, path.sep or path.delimiter does not.
 
-## File system
+### Localization
+- `require('uxp').host` is avaliable, but host.uiLocale is undefined (Should work, but it doesn't.)
+- `navigator.language` is undefined
+- `(new Intl.NumberFormat()).resolvedOptions().locale` // "en-US" (for German UI)
+
+## File System
 - Adobe: »[...] there is no way to get a token from the file after reading using the FileSystem APIs, [...].« Currently only with the file picker.
