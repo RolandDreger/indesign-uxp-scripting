@@ -7,6 +7,7 @@ Collected resources, articles and tutorials around UXP Scripting in Adobe InDesi
 - [Spectrum UXP Reference](https://developer.adobe.com/indesign/uxp/uxp/reference-spectrum/)
 - [Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/)
 - [Spectrum Web Components (Storybook)](https://opensource.adobe.com/spectrum-web-components/storybook/)
+- [Spectrum design system](https://spectrum.adobe.com/)
 
 &nbsp;
 # Articles
@@ -38,13 +39,15 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 - [Unsupported Attributes](https://developer.adobe.com/indesign/uxp/uxp/reference-html/General/Unsupported%20Attributes/)
 
 ## CSS
+- Pseudo-class `:define` (for custom elements)
+- `@media(prefers-color-scheme: dark)` always light
 
 ## JavaScript
 
 - Assign a value to custom property: `Element.style.setProperty('--custom-property', 'value')`
 - Get content from template element: `Template.content.cloneNode(true)`
 - `setTimeout()` (I think execution is terminated before tasks in the task queue will be executed)
-	With a delay of zero, only the first one seems to work:
+	With a delay of zero, only the first one seems to work in the main script:
 	```
 	setTimeout(() => {
 		console.log("Time out finished 1");
@@ -53,13 +56,20 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 		console.log("Time out finished 2");
 	}, 0);
 	```
-- `new DOMParser()` nope ... DOMParser is not defined
+- `new DOMParser()` nope ... *DOMParser is not defined*
 - `require('path')` is avaliable. path.basename works, but path.dirname, path.sep or path.delimiter does not.
+- `createTreeWalker()` *is not a function*
 
 ### Localization
-- `require('uxp').host` is avaliable, but host.uiLocale is undefined (Should work, but it doesn't.)
+- `require('uxp').host` is avaliable, but host.uiLocale *is undefined* (Should work, but it doesn't.)
 - `navigator.language` is undefined
-- `(new Intl.NumberFormat()).resolvedOptions().locale` // "en-US" (for German UI)
+- `(new Intl.NumberFormat()).resolvedOptions().locale` *"en-US"* (for German UI)
 
 ## File System
 - Adobe: »[...] there is no way to get a token from the file after reading using the FileSystem APIs, [...].« Currently only with the file picker.
+
+## Spectrum
+Spectrum Web Components do not seem to be registered (`window.customElements.get('sp-button')` returns *undefined*), but they are and they work a little differently than described on the [Spectrum Web Component](https://opensource.adobe.com/spectrum-web-components/) page. Also, they do not yet follow the InDesign theme changes (dark, light, ...).
+- `window.customElements.get('sp-button')` *undefined*
+- `window.customElements.whenDefined('sp-button')` *is not a function*
+- `document.theme.getCurrent()` always "light"
