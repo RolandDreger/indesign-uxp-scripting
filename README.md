@@ -39,6 +39,7 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 - [Unsupported Attributes](https://developer.adobe.com/indesign/uxp/uxp/reference-html/General/Unsupported%20Attributes/)
 
 ## CSS
+- `display: grid`
 - Pseudo-class `:define` (for custom elements)
 - `@media(prefers-color-scheme: dark)` always light
 
