@@ -2,12 +2,20 @@
 Collected resources, articles and tutorials around UXP Scripting in Adobe InDesign. Hints on further sources and corrections are very welcome!
 
 ## Adobe
+### Reference
 - [UXP for Adobe InDesign](https://developer.adobe.com/indesign/uxp)
 - [JavaScript Reference](https://developer.adobe.com/indesign/uxp/uxp/reference-js/)
-- [Spectrum UXP Reference](https://developer.adobe.com/indesign/uxp/uxp/reference-spectrum/)
-- [Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/)
-- [Spectrum Web Components (Storybook)](https://opensource.adobe.com/spectrum-web-components/storybook/)
-- [Spectrum design system](https://spectrum.adobe.com/)
+### Spectrum
+- [Reference](https://developer.adobe.com/indesign/uxp/uxp/reference-spectrum/)
+- [Web Components](https://opensource.adobe.com/spectrum-web-components/)
+- [Web Components (Storybook)](https://opensource.adobe.com/spectrum-web-components/storybook/)
+- [Design System](https://spectrum.adobe.com/)
+- [Color palette](https://spectrum.adobe.com/page/color-palette/)
+- [UI Icons](https://spectrum.adobe.com/page/icons/)
+- [Web Componentes icons-ui](https://opensource.adobe.com/spectrum-web-components/components/icons-ui/)
+- [Web Componentes icons-workflow](https://opensource.adobe.com/spectrum-web-components/components/icons-workflow/)
+- [Spectrum Web Components Discussions](https://github.com/adobe/spectrum-web-components/discussions)
+- [Spectrum Web Components Issues](https://github.com/adobe/spectrum-web-components/issues)
 
 &nbsp;
 # Articles
@@ -29,6 +37,7 @@ Collected resources, articles and tutorials around UXP Scripting in Adobe InDesi
 &nbsp;
 # Community
 - [Adobe Support Community](https://community.adobe.com/t5/indesign/ct-p/ct-indesign?page=1&sort=latest_replies&lang=all&tabid=all&topics=label-uxpscripting)
+- [Creative Cloud Developer Forum](https://forums.creativeclouddeveloper.com/)
 
 &nbsp;
 # What does not work?
