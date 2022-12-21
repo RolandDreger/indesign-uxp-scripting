@@ -67,9 +67,10 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 	}, 0);
 	```
 - `new DOMParser()` nope ... *DOMParser is not defined*
-- `require('path')` is avaliable. path.basename works, but path.dirname, path.sep or path.delimiter does not.
+- `require('path')` is avaliable. path.basename works, but path.dirname, path.sep or path.delimiter does not. (instead use window.path.dirname() and window.path.sep)
 - `createTreeWalker()` *is not a function*
 - `app.doScript()` »Adobe confirmed that app.doScript() doesn't work yet in UXP, and that they're working on its implementation.«[^1] 
+- Property `propertes` does not work anymore, e.g. `app.activeDocument.properties.fullName` // undefined
 
 [^1]:[Adding Undo to a UXP Script](https://community.adobe.com/t5/indesign-discussions/adding-undo-to-a-uxp-script/td-p/13402259#bodyDisplay_f0b1ab8eb5d3ef_4)
 
