@@ -40,7 +40,7 @@ Collected resources, articles and tutorials around UXP Scripting in Adobe InDesi
 - [Creative Cloud Developer Forum](https://forums.creativeclouddeveloper.com/)
 
 &nbsp;
-# What does not work?
+# What does *not* work?
 A incomplete list of what is not possible with UXP Scripting (at the moment).
 ## HTML
 - `template` element
@@ -51,6 +51,7 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 - `display: grid`
 - Pseudo-class `:define` (for custom elements)
 - `@media(prefers-color-scheme: dark)` always light
+- `gap` property for Flexbox
 
 ## JavaScript
 
