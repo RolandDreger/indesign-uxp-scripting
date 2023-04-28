@@ -75,6 +75,7 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 - `createTreeWalker()` *is not a function*
 - `app.doScript()` »Adobe confirmed that app.doScript() doesn't work yet in UXP, and that they're working on its implementation.«[^1] 
 - Property `properties` does not work anymore, e.g. `app.activeDocument.properties.fullName` // undefined
+- Global function `structuredClone()` *structuredClone is not defined*
 
 [^1]:[Adding Undo to a UXP Script](https://community.adobe.com/t5/indesign-discussions/adding-undo-to-a-uxp-script/td-p/13402259#bodyDisplay_f0b1ab8eb5d3ef_4)
 
