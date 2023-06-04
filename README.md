@@ -47,6 +47,8 @@ Collected resources, articles and tutorials around UXP Scripting in Adobe InDesi
 A incomplete list of what is not possible with UXP Scripting (at the moment).
 ## HTML
 - `template` element
+- Element attribute `draggable="true"`
+- Element attribute `contenteditable="true"`
 - [Unsupported Elements](https://developer.adobe.com/indesign/uxp/uxp/reference-html/General/Unsupported%20Elements/)
 - [Unsupported Attributes](https://developer.adobe.com/indesign/uxp/uxp/reference-html/General/Unsupported%20Attributes/)
 
@@ -55,6 +57,7 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 - Pseudo-class `:define` (for custom elements)
 - `@media(prefers-color-scheme: dark)` always light
 - `gap` property for Flexbox
+- Animations do not seem to work!? (transion, @keyframes)
 
 ## JavaScript
 
@@ -71,6 +74,8 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 	}, 0);
 	```
 - `new DOMParser()` nope ... *DOMParser is not defined*
+- XPath `document.evaluate(...)` *document.evaluate is not a function* and *XPathResult is not defined*
+- `new TextDecoder('utf-8')` *TextDecoder is not defined*
 - `require('path')` is avaliable. path.basename works, but path.dirname, path.sep or path.delimiter does not. (instead use window.path.dirname() and window.path.sep)
 - `createTreeWalker()` *is not a function*
 - `app.doScript()` »Adobe confirmed that app.doScript() doesn't work yet in UXP, and that they're working on its implementation.«[^1] 
