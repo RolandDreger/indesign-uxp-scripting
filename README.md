@@ -54,9 +54,10 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 
 ## CSS
 - `display: grid`
-- Pseudo-class `:define` (for custom elements)
-- `@media(prefers-color-scheme: dark)` always light
 - `gap` property for Flexbox
+- `aspect-ratio`
+- `@media(prefers-color-scheme: dark)` always light
+- Pseudo-class `:define` (for custom elements)
 - Animations do not seem to work!? (transion, @keyframes)
 
 ## JavaScript
