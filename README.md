@@ -70,6 +70,19 @@ app.doScript("console.log(\"Hello UXP world!\")", indesign.ScriptLanguage.UXPSCR
 
 And application events and menus are now available as well.
 
+Finally, the prototype chain for InDesign DOM objects has changed. So you can no longer check with hasOwnProperty:
+
+```
+var app = require("indesign").app;
+app.hasOwnProperty("activeDocument")	// false
+Object.hasOwn(app, "activeDocument")	// false
+```
+
+Instead e.g.:
+```
+("activeDocument" in app)		// true
+```
+
 
 &nbsp;
 # What does *not* work?
