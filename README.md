@@ -43,6 +43,35 @@ Collected resources, articles and tutorials around UXP Scripting in Adobe InDesi
 - [Creative Cloud Developer Forum](https://forums.creativeclouddeveloper.com/)
 
 &nbsp;
+# What's new in InDesign App Version 18.4.0 / UXP Version 6.5.0
+
+InDesign DOM is now available only via module:
+
+```
+const app = require("indesign").app;
+console.log(app.activeDocument.name);
+```
+
+Indesign enumerators no longer available globally, e.g.:
+
+```
+const indesign = require("indesign");
+const app = indesign.app;
+app.scriptPreferences.userInteractionLevel = indesign.UserInteractionLevels.NEVER_INTERACT;
+```
+
+`doScript` works:
+
+```
+const indesign = require("indesign");
+const app = indesign.app;
+app.doScript("console.log(\"Hello UXP world!\")", indesign.ScriptLanguage.UXPSCRIPT);
+```
+
+And application events and menus are now available as well.
+
+
+&nbsp;
 # What does *not* work?
 A incomplete list of what is not possible with UXP Scripting (at the moment).
 ## HTML
@@ -78,12 +107,9 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 - XPath `document.evaluate(...)` *document.evaluate is not a function* and *XPathResult is not defined*
 - `new TextDecoder('utf-8')` *TextDecoder is not defined*
 - `require('path')` is avaliable. path.basename works, but path.dirname, path.sep or path.delimiter does not. (instead use window.path.dirname() and window.path.sep)
-- `createTreeWalker()` *is not a function*
-- `app.doScript()` »Adobe confirmed that app.doScript() doesn't work yet in UXP, and that they're working on its implementation.«[^1] 
+- `createTreeWalker()` *is not a function* 
 - Property `properties` does not work anymore, e.g. `app.activeDocument.properties.fullName` // undefined
 - Global function `structuredClone()` *structuredClone is not defined*
-
-[^1]:[Adding Undo to a UXP Script](https://community.adobe.com/t5/indesign-discussions/adding-undo-to-a-uxp-script/td-p/13402259#bodyDisplay_f0b1ab8eb5d3ef_4)
 
 ### Localization
 - `require('uxp').host` is avaliable, but host.uiLocale *is undefined* (Should work, but it doesn't.)
