@@ -9,21 +9,19 @@
 Standard open file dialog box
 
 <table>
-	<thead>
-		<tr>
-			<th>JSX</th>
-			<th>UXP</th>
-		</tr>
-	</thead>
 	<tbody>
 		<tr>
-			<td style="vertical-align: top">
-				`File.openDialog("Select file")` 
+			<th>JSX</th>
+			<th>**UXP**</th>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;">
+				var file = File.openDialog("Select file");
 			</td>
-			<td style="vertical-align: top">
-				`const uxpfs = require('uxp').storage;<br>
+			<td style="vertical-align: top;">
+				const uxpfs = require('uxp').storage;<br>
 				const ufs = uxpfs.localFileSystem;<br>
-				const textFile = await ufs.getFileForOpening();`
+				const file = await ufs.getFileForOpening();
 			</td>
 		</tr>
 	</tbody>
