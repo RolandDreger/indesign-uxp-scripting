@@ -31,18 +31,10 @@ ECMAScript 6 | V8
 </tr>
 <tr>
 <td style="vertical-align: top;">
-
-```javascript
 var, const
-```
-
 </td>
 <td style="vertical-align: top;">
-
-```javascript
 var, let, const
-```
-
 </td>
 </tr>
 </tbody>
