@@ -198,7 +198,7 @@ script.scriptPath.url.href // "file:///"
 
 ### Passing Script Arguments
 
-InDesign 18.4 onward: Arguments/parameters can be passed to UXP scripts. Read more in the article [Passing Arguments](https://developer.adobe.com/indesign/uxp/recipes/arguments/)
+InDesign 18.4 onward: Arguments/parameters can be passed to UXP scripts. Read more in the recipe [Passing Arguments](https://developer.adobe.com/indesign/uxp/recipes/arguments/)
 
 <table>
 <tbody>
@@ -347,7 +347,7 @@ const localFS = uxpStorage.localFileSystem;
 const pluginFolder = await localFS.getPluginFolder(); // InDesign 18.4 onward: Error
 ```
 
-- Arguments/parameters can now be passed to UXP scripts. Read more in the article [Passing Arguments](https://developer.adobe.com/indesign/uxp/recipes/arguments/)
+- Arguments/parameters can now be passed to UXP scripts. Read more in the recipe [Passing Arguments](https://developer.adobe.com/indesign/uxp/recipes/arguments/)
 
 - InDesign now has the functionality to set result of a UXP script.
 
