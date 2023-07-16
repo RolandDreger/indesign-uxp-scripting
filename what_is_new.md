@@ -12,10 +12,14 @@
 		</tr>
 		<tr>
 			<td style="vertical-align: top;">
-				ECMAScript 3
+```
+ECMAScript 3
+```
 			</td>
 			<td style="vertical-align: top;">
-				ECMAScript 6 | V8
+```
+ECMAScript 6 | V8
+```
 			</td>
 		</tr>
 	</tbody>
