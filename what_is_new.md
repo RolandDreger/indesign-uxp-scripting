@@ -17,13 +17,13 @@ Standard open file dialog box
 	</thead>
 	<tbody>
 		<tr>
-			<td>
-				File.openDialog("Select file") 
+			<td style="vertical-alignment: top">
+				`File.openDialog("Select file")` 
 			</td>
-			<td>
-				const uxpfs = require('uxp').storage;<br>
+			<td style="vertical-alignment: top">
+				`const uxpfs = require('uxp').storage;<br>
 				const ufs = uxpfs.localFileSystem;<br>
-				const textFile = await ufs.getFileForOpening();
+				const textFile = await ufs.getFileForOpening();`
 			</td>
 		</tr>
 	</tbody>
@@ -32,7 +32,7 @@ Standard open file dialog box
 
 
 
-
+&nbsp;
 ## InDesign App Version 18.4.0 / UXP Version 6.5.0
 
 InDesign DOM is now available only via module:
