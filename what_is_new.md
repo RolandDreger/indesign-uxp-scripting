@@ -5,24 +5,26 @@
 ### JavaScript Version | Engine
 
 <table>
-	<tbody>
-		<tr>
-			<th>JSX</th>
-			<th>UXP</th>
-		</tr>
-		<tr>
-			<td style="vertical-align: top;">
+<tbody>
+<tr>
+<th>JSX</th>
+<th>UXP</th>
+</tr>
+<tr>
+<td style="vertical-align: top;">
 ```
 ECMAScript 3
 ```
-			</td>
-			<td style="vertical-align: top;">
+</td>
+<td style="vertical-align: top;">
+
 ```
 ECMAScript 6 | V8
 ```
-			</td>
-		</tr>
-	</tbody>
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ### Variables
