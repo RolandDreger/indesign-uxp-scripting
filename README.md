@@ -26,6 +26,11 @@ Collected resources, articles and tutorials around UXP Scripting in Adobe InDesi
 - [Plans for UXP in 2023](https://blog.developer.adobe.com/plans-for-uxp-in-2023-d06091944308) New features planned for UXP v7.0 and beyond
 
 &nbsp;
+# Videos
+-  [Adobe UXP: Things you need to know! #Special The UXP Landscape Guide]( 
+https://www.youtube.com/watch?v=PjqhwGGTCjE)
+
+&nbsp;
 # Tutorials
 ## indesignblog.com (Gregor Fellenz)
 - [Quickstart UXP Scripting](https://www.indesignblog.com/2022/11/quickstart-uxp-scripting/)
