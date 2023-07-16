@@ -12,18 +12,10 @@
 </tr>
 <tr>
 <td style="vertical-align: top;">
-
-```
 ECMAScript 3
-```
-
 </td>
 <td style="vertical-align: top;">
-
-```
 ECMAScript 6 | V8
-```
-
 </td>
 </tr>
 </tbody>
@@ -32,20 +24,28 @@ ECMAScript 6 | V8
 ### Variables
 
 <table>
-	<tbody>
-		<tr>
-			<th>JSX</th>
-			<th>UXP</th>
-		</tr>
-		<tr>
-			<td style="vertical-align: top;">
-				var, const
-			</td>
-			<td style="vertical-align: top;">
-				var, let, const
-			</td>
-		</tr>
-	</tbody>
+<tbody>
+<tr>
+<th>JSX</th>
+<th>UXP</th>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+
+```javascript
+var, const
+```
+
+</td>
+<td style="vertical-align: top;">
+
+```javascript
+var, let, const
+```
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ### InDesign Collection
@@ -53,61 +53,85 @@ ECMAScript 6 | V8
 Collection objects returned by InDesign no longer support the subscript operator [] to access an element with a specific index. In UXP you have to use item() instead.
 
 <table>
-	<tbody>
-		<tr>
-			<th>JSX</th>
-			<th>UXP</th>
-		</tr>
-		<tr>
-			<td style="vertical-align: top;">
-				Story.paragraphs[0]
-			</td>
-			<td style="vertical-align: top;">
-				Story.paragraphs.item(0)
-			</td>
-		</tr>
-	</tbody>
+<tbody>
+<tr>
+<th>JSX</th>
+<th>UXP</th>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+
+```javascript
+Story.paragraphs[0]
+```
+
+</td>
+<td style="vertical-align: top;">
+
+```javascript
+Story.paragraphs.item(0)
+```
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ### InDesign DOM Object Constructor Name
 
 <table>
-	<tbody>
-		<tr>
-			<th>JSX</th>
-			<th>UXP</th>
-		</tr>
-		<tr>
-			<td style="vertical-align: top;">
-				app.activeDocument.constructor.name // Document
-			</td>
-			<td style="vertical-align: top;">
-				app.activeDocument.constructorName // "Document" Prior to InDesign 18.4<br>
-				require("indesign").app.activeDocument.constructor.name // "Document"<br>
-				require("indesign").app.activeDocument.constructorName // "Document"
-			</td>
-		</tr>
-	</tbody>
+<tbody>
+<tr>
+<th>JSX</th>
+<th>UXP</th>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+
+```javascript
+app.activeDocument.constructor.name // Document
+```
+
+</td>
+<td style="vertical-align: top;">
+
+```javascript
+app.activeDocument.constructorName // "Document" Prior to InDesign 18.4
+require("indesign").app.activeDocument.constructor.name // "Document"
+require("indesign").app.activeDocument.constructorName // "Document"
+```
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ### InDesign DOM Object Comparison Operator
 
 <table>
-	<tbody>
-		<tr>
-			<th>JSX</th>
-			<th>UXP</th>
-		</tr>
-		<tr>
-			<td style="vertical-align: top;">
-				app.activeDocument === app.documents[0] // true
-			</td>
-			<td style="vertical-align: top;">
-				const app = require("indesign").app;<br>
-				app.activeDocument.equals(app.documents.item(0)); // true
-			</td>
-		</tr>
-	</tbody>
+<tbody>
+<tr>
+<th>JSX</th>
+<th>UXP</th>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+
+```javascript
+app.activeDocument === app.documents[0] // true
+```
+
+</td>
+<td style="vertical-align: top;">
+
+```javascript
+const app = require("indesign").app;
+app.activeDocument.equals(app.documents.item(0)); // true
+```
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ### InDesign DOM Object instanceof 
@@ -115,20 +139,28 @@ Collection objects returned by InDesign no longer support the subscript operator
 The instanceof keyword isn't supported for InDesign DOM objects.
 
 <table>
-	<tbody>
-		<tr>
-			<th>JSX</th>
-			<th>UXP</th>
-		</tr>
-		<tr>
-			<td style="vertical-align: top;">
-				app.activeDocument instanceof Document // true
-			</td>
-			<td style="vertical-align: top;">
-				Instead, we have to use the Constructor Name property.
-			</td>
-		</tr>
-	</tbody>
+<tbody>
+<tr>
+<th>JSX</th>
+<th>UXP</th>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+
+```javascript
+app.activeDocument instanceof Document // true
+```
+
+</td>
+<td style="vertical-align: top;">
+
+```javascript
+// Instead, we have to use the Constructor Name property.
+```
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ### Global object `document` 
@@ -142,24 +174,32 @@ Prior to InDesign 18.4: `app.activeScript` returns the path of the current scrip
 Onwards InDesign 18.4: see below.
 
 <table>
-	<tbody>
-		<tr>
-			<th>JSX</th>
-			<th>UXP</th>
-		</tr>
-		<tr>
-			<td style="vertical-align: top;">
-				app.activeScript // File
-			</td>
-			<td style="vertical-align: top;">
-				const app = require("indesign").app;<br>
-				const script = await app.activeScript<br>
-				script.nativePath; // "/"<br>
-				script.isFolder; // true<br>
-				script.scriptPath.url.href // "file:///"
-			</td>
-		</tr>
-	</tbody>
+<tbody>
+<tr>
+<th>JSX</th>
+<th>UXP</th>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+
+```javascript
+app.activeScript // File
+```
+
+</td>
+<td style="vertical-align: top;">
+
+```javascript
+const app = require("indesign").app;
+const script = await app.activeScript
+script.nativePath; // "/"
+script.isFolder; // true
+script.scriptPath.url.href // "file:///"
+```
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ### Passing Script Arguments
@@ -167,24 +207,32 @@ Onwards InDesign 18.4: see below.
 InDesign 18.4 onward: Arguments/parameters can be passed to UXP scripts. Read more in the article [Passing Arguments](https://developer.adobe.com/indesign/uxp/recipes/arguments/)
 
 <table>
-	<tbody>
-		<tr>
-			<th>JSX</th>
-			<th>UXP</th>
-		</tr>
-		<tr>
-			<td style="vertical-align: top;">
-				app.scriptArgs.setValue("argOne", "one);<br>
-				app.scriptArgs.getValue("argOne"); // "one"
-			</td>
-			<td style="vertical-align: top;">
-				const script = require("uxp").script;<br>
-				script.args.push("one");<br>
-				script.args.push("two");<br>
-				script.args // ["one", "two"]
-			</td>
-		</tr>
-	</tbody>
+<tbody>
+<tr>
+<th>JSX</th>
+<th>UXP</th>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+
+```javascript
+app.scriptArgs.setValue("argOne", "one);
+app.scriptArgs.getValue("argOne"); // "one"
+```
+
+</td>
+<td style="vertical-align: top;">
+
+```javascript
+const script = require("uxp").script;
+script.args.push("one");
+script.args.push("two");
+script.args // ["one", "two"]
+```
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ### Logging
@@ -192,22 +240,30 @@ InDesign 18.4 onward: Arguments/parameters can be passed to UXP scripts. Read mo
 Standard open file dialog box
 
 <table>
-	<tbody>
-		<tr>
-			<th>JSX</th>
-			<th>UXP</th>
-		</tr>
-		<tr>
-			<td style="vertical-align: top;">
-				$.writeln('Your log message.');
-			</td>
-			<td style="vertical-align: top;">
-				console.log('Your log message.');<br>
-				console.warn('Your log message.');<br>
-				...
-			</td>
-		</tr>
-	</tbody>
+<tbody>
+<tr>
+<th>JSX</th>
+<th>UXP</th>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+
+```
+$.writeln('Your log message.');
+```
+
+</td>
+<td style="vertical-align: top;">
+
+```javascript
+console.log('Your log message.');
+console.warn('Your log message.');
+...
+```
+
+</td>
+</tr>
+</tbody>
 </table>
 
 ### File System
@@ -215,21 +271,29 @@ Standard open file dialog box
 Standard open file dialog box
 
 <table>
-	<tbody>
-		<tr>
-			<th>JSX</th>
-			<th>UXP</th>
-		</tr>
-		<tr>
-			<td style="vertical-align: top;">
-				var file = File.openDialog("Select file");
-			</td>
-			<td style="vertical-align: top;">
-				const ufs = require('uxp').storage.localFileSystem;<br>
-				const file = await ufs.getFileForOpening();
-			</td>
-		</tr>
-	</tbody>
+<tbody>
+<tr>
+<th>JSX</th>
+<th>UXP</th>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+
+```javascript
+var file = File.openDialog("Select file");
+```
+
+</td>
+<td style="vertical-align: top;">
+
+```javascript
+const ufs = require('uxp').storage.localFileSystem;
+const file = await ufs.getFileForOpening();
+```
+
+</td>
+</tr>
+</tbody>
 </table>
 
 
