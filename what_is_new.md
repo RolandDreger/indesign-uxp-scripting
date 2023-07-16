@@ -42,7 +42,7 @@
 
 ### InDesign Collection
 
-Collection objects returned by InDesign no longer support the subscript operator [] to access an element with a specific index.
+Collection objects returned by InDesign no longer support the subscript operator [] to access an element with a specific index. In UXP you have to use item() instead.
 
 <table>
 	<tbody>
@@ -129,7 +129,8 @@ The global object `document` is unsupported in UXP.
 
 ### ActiveScript
 
-Prior to InDesign 18.4: `app.activeScript` returns the path of the current script as a string and a error in UXP Developer Tool (UDT). No other properties can be accessed on app.activeScript 
+Prior to InDesign 18.4: `app.activeScript` returns the path of the current script as a string and a error in UXP Developer Tool (UDT).
+
 Onwards InDesign 18.4: see below.
 
 <table>
@@ -155,7 +156,7 @@ Onwards InDesign 18.4: see below.
 
 ### Passing Script Arguments
 
-InDesign 18.4 onward: Arguments/parameters can be passed to UXP scripts. Read more here → [Passing Arguments](https://developer.adobe.com/indesign/uxp/recipes/arguments/)
+InDesign 18.4 onward: Arguments/parameters can be passed to UXP scripts. Read more in the article [Passing Arguments](https://developer.adobe.com/indesign/uxp/recipes/arguments/)
 
 <table>
 	<tbody>
@@ -216,15 +217,12 @@ Standard open file dialog box
 				var file = File.openDialog("Select file");
 			</td>
 			<td style="vertical-align: top;">
-				const uxpfs = require('uxp').storage;<br>
-				const ufs = uxpfs.localFileSystem;<br>
+				const ufs = require('uxp').storage.localFileSystem;<br>
 				const file = await ufs.getFileForOpening();
 			</td>
 		</tr>
 	</tbody>
 </table>
-
-
 
 
 &nbsp;
@@ -245,7 +243,7 @@ const app = indesign.app;
 app.scriptPreferences.userInteractionLevel = indesign.UserInteractionLevels.NEVER_INTERACT;
 ```
 
-`constructor.name` for InDesign DOM objects now works again
+`constructor.name` for InDesign DOM objects now works again:
 
 ```
 require("indesign").app;
@@ -283,4 +281,4 @@ const localFS = uxpStorage.localFileSystem;
 const pluginFolder = await localFS.getPluginFolder(); // InDesign 18.4 onward: Error
 ```
 
-Arguments/parameters can now be passed to UXP scripts. Read more here → [Passing Arguments](https://developer.adobe.com/indesign/uxp/recipes/arguments/)
+Arguments/parameters can now be passed to UXP scripts. Read more in the article [Passing Arguments](https://developer.adobe.com/indesign/uxp/recipes/arguments/)
