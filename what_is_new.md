@@ -89,8 +89,10 @@ app.activeDocument.constructor.name // Document
 
 ```javascript
 app.activeDocument.constructorName // "Document" Prior to InDesign 18.4
-require("indesign").app.activeDocument.constructor.name // "Document"
-require("indesign").app.activeDocument.constructorName // "Document"
+
+const app = require("indesign"); // Onwards InDesign 18.4
+app.app.activeDocument.constructor.name // "Document"
+app.app.activeDocument.constructorName // "Document"
 ```
 
 </td>
@@ -117,7 +119,7 @@ app.activeDocument === app.documents[0] // true
 <td style="vertical-align: top;">
 
 ```javascript
-const app = require("indesign").app;
+const app = require("indesign").app; // Onwards InDesign 18.4
 app.activeDocument.equals(app.documents.item(0)); // true
 ```
 
@@ -182,7 +184,7 @@ app.activeScript // File
 <td style="vertical-align: top;">
 
 ```javascript
-const app = require("indesign").app;
+const app = require("indesign").app; // Onwards InDesign 18.4
 const script = await app.activeScript
 script.nativePath; // "/"
 script.isFolder; // true
