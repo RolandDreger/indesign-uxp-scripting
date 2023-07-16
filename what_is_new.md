@@ -294,14 +294,14 @@ const file = await ufs.getFileForOpening();
 &nbsp;
 ## InDesign App Version 18.4.0 / UXP Version 6.5.0
 
-InDesign DOM is now available only via module:
+- InDesign DOM is now available only via module:
 
 ```
 const app = require("indesign").app;
 console.log(app.activeDocument.name);
 ```
 
-Indesign enumerators no longer available globally, e.g.:
+- Indesign enumerators no longer available globally, e.g.:
 
 ```
 const indesign = require("indesign");
@@ -316,7 +316,7 @@ require("indesign").app;
 app.activeDocument.constructor.name // "Document"
 ```
 
-`doScript` works:
+- `doScript` works:
 
 ```
 const indesign = require("indesign");
@@ -324,9 +324,9 @@ const app = indesign.app;
 app.doScript("console.log(\"Hello UXP world!\")", indesign.ScriptLanguage.UXPSCRIPT);
 ```
 
-And application events and menus are now available as well.
+- And application [events](https://developer.adobe.com/indesign/uxp/recipes/events/) and [menus](https://developer.adobe.com/indesign/uxp/recipes/menus/) are now available as well.
 
-Finally, the prototype chain for InDesign DOM objects has changed. So you can no longer check with hasOwnProperty:
+- The prototype chain for InDesign DOM objects has changed. So you can no longer check with hasOwnProperty:
 
 ```
 var app = require("indesign").app;
@@ -339,7 +339,7 @@ Instead e.g.:
 ("activeDocument" in app)		// true
 ```
 
-The plugin folder is no longer available for UXP scripts.
+- The plugin folder is no longer available for UXP scripts.
 
 ```
 const uxpStorage = require('uxp').storage;
@@ -347,4 +347,10 @@ const localFS = uxpStorage.localFileSystem;
 const pluginFolder = await localFS.getPluginFolder(); // InDesign 18.4 onward: Error
 ```
 
-Arguments/parameters can now be passed to UXP scripts. Read more in the article [Passing Arguments](https://developer.adobe.com/indesign/uxp/recipes/arguments/)
+- Arguments/parameters can now be passed to UXP scripts. Read more in the article [Passing Arguments](https://developer.adobe.com/indesign/uxp/recipes/arguments/)
+
+- InDesign now has the functionality to set result of a UXP script.
+
+```
+script.setResult("Hello World!");
+```

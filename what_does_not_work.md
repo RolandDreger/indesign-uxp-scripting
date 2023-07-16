@@ -17,6 +17,7 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 
 ## JavaScript
 
+- JavaScript alert(), confirm() or prompt() are not supported. 
 - Assign a value to custom property: `Element.style.setProperty('--custom-property', 'value')`
 - Get content from template element: `Template.content.cloneNode(true)`
 - `setTimeout()` (I think execution is terminated before tasks in the task queue will be executed)
