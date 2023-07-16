@@ -12,11 +12,11 @@ Standard open file dialog box
 	<tbody>
 		<tr>
 			<th>JSX</th>
-			<th>**UXP**</th>
+			<th>UXP</th>
 		</tr>
 		<tr>
 			<td style="vertical-align: top;">
-				var file = File.openDialog("Select file");
+				<p>```var file = File.openDialog("Select file");```</p>
 			</td>
 			<td style="vertical-align: top;">
 				const uxpfs = require('uxp').storage;<br>
