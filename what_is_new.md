@@ -17,10 +17,10 @@ Standard open file dialog box
 	</thead>
 	<tbody>
 		<tr>
-			<td style="vertical-alignment: top">
+			<td style="vertical-align: top">
 				`File.openDialog("Select file")` 
 			</td>
-			<td style="vertical-alignment: top">
+			<td style="vertical-align: top">
 				`const uxpfs = require('uxp').storage;<br>
 				const ufs = uxpfs.localFileSystem;<br>
 				const textFile = await ufs.getFileForOpening();`
