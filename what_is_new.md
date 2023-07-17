@@ -90,9 +90,9 @@ app.activeDocument.constructor.name // Document
 ```javascript
 app.activeDocument.constructorName // "Document" Prior to InDesign 18.4
 
-const app = require("indesign"); // Onwards InDesign 18.4
-app.app.activeDocument.constructor.name // "Document"
-app.app.activeDocument.constructorName // "Document"
+const app = require("indesign").app; // Onwards InDesign 18.4
+app.activeDocument.constructor.name // "Document"
+app.activeDocument.constructorName // "Document"
 ```
 
 </td>
@@ -230,8 +230,6 @@ script.args // ["one", "two"]
 </table>
 
 ### Logging
-
-Standard open file dialog box
 
 <table>
 <tbody>
