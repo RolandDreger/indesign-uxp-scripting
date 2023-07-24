@@ -33,7 +33,6 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 - `new DOMParser()` nope ... *DOMParser is not defined*
 - XPath `document.evaluate(...)` *document.evaluate is not a function* and *XPathResult is not defined*
 - `new TextDecoder('utf-8')` *TextDecoder is not defined*
-- `require('path')` is avaliable. path.basename works, but path.dirname, path.sep or path.delimiter does not. (instead use window.path.dirname() and window.path.sep)
 - `createTreeWalker()` *is not a function* 
 - Property `properties` does not work anymore, e.g. `app.activeDocument.properties.fullName` // undefined
 - Global function `structuredClone()` *structuredClone is not defined*

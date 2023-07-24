@@ -352,3 +352,9 @@ const pluginFolder = await localFS.getPluginFolder(); // InDesign 18.4 onward: E
 ```
 script.setResult("Hello World!");
 ```
+
+- The `path` module is provided:
+
+```
+path.parse("~/Desktop/image.jpg") // {root: "", dir: "~/Desktop", base: "image.jpg", ext: ".jpg", name: "image"}
+```
