@@ -159,7 +159,7 @@ app.activeDocument instanceof Document // true
 
 ### Global object `document` 
 
-The global object `document` is unsupported in UXP.
+The global object `document` (which stood for an InDesign document) is unsupported in UXP.
 
 ### ActiveScript
 
