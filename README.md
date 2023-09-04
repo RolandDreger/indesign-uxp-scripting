@@ -24,6 +24,7 @@ Collected resources, articles and tutorials around UXP Scripting in Adobe InDesi
 - [Was bringt InDesigns neue UXP Scripting API?](https://xporc.net/2022/12/02/was-bringt-indesigns-neue-uxp-scripting-api/)
 - [Getting Started with IDJS (InDesign UXP Scripting Format)](https://indiscripts.com/post/2023/01/getting-started-with-idjs-indesign-uxp-scripting-format)
 - [Plans for UXP in 2023](https://blog.developer.adobe.com/plans-for-uxp-in-2023-d06091944308) New features planned for UXP v7.0 and beyond
+- [Everything That Went into Creating the First-Ever UXP-Based Plugin for Adobe InDesign](https://blog.developer.adobe.com/what-went-into-creating-the-first-ever-uxp-based-plugin-for-adobe-indesign-78bc701c5cbd)
 
 &nbsp;
 # Videos
