@@ -18,9 +18,10 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 - `new DOMParser()` nope ... *DOMParser is not defined*
 - XPath `document.evaluate(...)` *document.evaluate is not a function* and *XPathResult is not defined*
 - `new TextDecoder('utf-8')` *TextDecoder is not defined*
-- Property `properties` does not work anymore, e.g. `app.activeDocument.properties.fullName` // undefined
+- Up to v18.4: Property `properties` does not work anymore, e.g. `app.activeDocument.properties.fullName` // undefined
+	Onwards v18.5: Since the current version it seems to work (almost) like before. Is everything okay now? That has to be shown by further tests. One of the changes: `Document.fullName` now returns a Promise: `app.activeDocument.properties.fullName` // Promise
 - Global function `structuredClone()` *structuredClone is not defined*
 
 ### Localization
-- `navigator.language` is undefined (-> require("uxp").host.uiLocale works)
+- `navigator.language` is undefined (-> require("uxp").host.locale works)
 - `(new Intl.NumberFormat()).resolvedOptions().locale` *"en-US"* (for German UI)
