@@ -358,3 +358,43 @@ script.setResult("Hello World!");
 ```
 path.parse("~/Desktop/image.jpg") // {root: "", dir: "~/Desktop", base: "image.jpg", ext: ".jpg", name: "image"}
 ```
+
+- Sectrum Web Components (BETA)
+
+In addition to the built-in *Spectrum UXP widgets*, *Spectrum Web Components* are now supported. They are currently still in the beta phase.
+
+**Manifest**
+
+```
+...
+"featureFlags: {
+	"enableSWCSupport": true
+}
+...
+
+```
+
+**Example: SP-Button**
+
+1. Install
+```
+npm install @spectrum-web-components/theme
+npm install @swc-uxp-wrappers/utils
+npm install @swc-uxp-wrappers/button
+
+```
+
+2. Import
+```
+import "@spectrum-web-components/theme/sp-theme.js";
+import "@spectrum-web-components/theme/src/themes.js";
+import "@swc-uxp-wrappers/button/sp-button.js";
+
+```
+
+3. Usage
+```
+<sp-theme theme="spectrum" color="light" scale="medium" dir="ltr">
+	<sp-button variant="primary">Click me</sp-button>
+</sp-theme>
+```
