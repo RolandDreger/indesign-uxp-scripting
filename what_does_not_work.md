@@ -23,6 +23,13 @@ A incomplete list of what is not possible with UXP Scripting (at the moment).
 - Up to v18.4: Property `properties` does not work anymore, e.g. `app.activeDocument.properties.fullName` // undefined
 	Onwards v18.5: Since the current version it seems to work (almost) like before. Is everything okay now? That has to be shown by further tests. One of the changes: `Document.fullName` now returns a Promise: `app.activeDocument.properties.fullName` // Promise
 - Global function `structuredClone()` *structuredClone is not defined*
+- Global function `window.matchMedia()` to evaluate the result of a media query. *matchMedia is not defined* 
+For theme changes we can use:
+```
+document.theme.onUpdated.addListener((theme) => {
+    console.log(theme);
+  });
+```
 - ...
 
 ### Localization
