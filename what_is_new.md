@@ -376,7 +376,15 @@ In addition to the built-in *Spectrum UXP widgets*, *Spectrum Web Components* ar
 
 **Example: SP-Button**
 
-1. Install
+1. Install[^1]
+   [^1]: Not always the same versions of the components are available via yarn and npm. I think that since yarn is recommended by Adobe, the components here are more up-to-date.
+   **yarn**
+```
+yarn add @spectrum-web-components/theme
+yarn add @swc-uxp-wrappers/utils
+yarn add @swc-uxp-wrappers/button
+```
+   **npm**
 ```
 npm install @spectrum-web-components/theme
 npm install @swc-uxp-wrappers/utils
