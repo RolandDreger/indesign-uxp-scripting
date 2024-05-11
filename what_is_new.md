@@ -378,6 +378,7 @@ In addition to the built-in *Spectrum UXP widgets*, *Spectrum Web Components* ar
 
 1. Install[^1]
    [^1]: Not always the same versions of the components are available via yarn and npm. I think that since yarn is recommended by Adobe, the components here are more up-to-date.
+
    **yarn**
 ```
 yarn add @spectrum-web-components/theme
