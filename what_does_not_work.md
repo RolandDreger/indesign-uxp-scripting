@@ -30,6 +30,7 @@ document.theme.onUpdated.addListener((theme) => {
     console.log(theme);
   });
 ```
+- “new AbortController()” works. But in event listeners, “controller.abort()” with the signal has no effect.
 - ...
 
 ### Localization
