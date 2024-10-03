@@ -31,6 +31,7 @@ document.theme.onUpdated.addListener((theme) => {
   });
 ```
 - “new AbortController()” works. But in event listeners, “controller.abort()” with the signal has no effect.
+- resolve() *resolve is not defined*, e.g. `resolve("/document[0]")` does not work
 - ...
 
 ### Localization
